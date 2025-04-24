@@ -14,7 +14,8 @@
 #
 # See https://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 require File.expand_path("../../config/environment", __FILE__)
-
+require_relative './support/factory_bot'
+require_relative './support/shoulda_matchers'
 RSpec.configure do |config|
   # rspec-expectations config goes here. You can use an alternate
   # assertion/expectation library such as wrong or the stdlib/minitest
