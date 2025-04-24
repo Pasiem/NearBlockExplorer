@@ -49,6 +49,8 @@ group :development, :test do
 
   # Omakase Ruby styling [https://github.com/rails/rubocop-rails-omakase/]
   gem "rubocop-rails-omakase", require: false
+
+  gem 'dotenv'
 end
 
 group :development do
@@ -64,3 +66,6 @@ group :test do
   gem 'shoulda-matchers', '~> 6.0'
 end
 gem "rspec-rails", group: [:development, :test]
+
+gem "sidekiq", "~> 8.0"
+gem 'sidekiq-cron'

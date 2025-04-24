@@ -1,0 +1,11 @@
+# Run updateTransactions worker every 10 mins to continually poll
+# for new transactions. This decision was based off of an article by
+# amazon stating:
+#      "Every ten minutes or so, miners collect these transactions into a new block 
+#       and add them permanently to the blockchain, 
+#       which acts like the definitive account book of Bitcoin." 
+# src: https://aws.amazon.com/what-is/blockchain/?aws-products-all.sort-by=item.additionalFields.productNameLowercase&aws-products-all.sort-order=asc#:~:text=Every%20ten%20minutes%20or%20so%2C%20miners%20collect%20these%20transactions%20into%20a%20new%20block%20and%20add%20them%20permanently%20to%20the%20blockchain%2C%20which%20acts%20like%20the%20definitive%20account%20book%20of%20Bitcoin.
+update_transactions_job:
+  cron: "*/10 * * * *" 
+  class: UpdateTransactions
+  queue: default
