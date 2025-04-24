@@ -1,0 +1,16 @@
+<h1>Transfers</h1>
+
+<table>
+  <tr>
+    <th>Sender</th>        
+    <th>Receiver</th>                    
+    <th>Deposit</th>
+  </tr>
+ <% @block_transactions.each do |bt| %>
+  <tr>
+    <td><%=bt.sender%></td>
+    <td><%=bt.receiver %></td>
+    <td><%=bt.transfer_deposit %></td> 
+  </tr>
+  <% end %>
+ </table>

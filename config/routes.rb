@@ -10,6 +10,8 @@ Rails.application.routes.draw do
 
   mount Sidekiq::Web => "/sidekiq" # access it at http://localhost:3000/sidekiq
 
+  get "/index", to: "block_transactions#index"
+
   # Render dynamic PWA files from app/views/pwa/* (remember to link manifest in application.html.erb)
   # get "manifest" => "rails/pwa#manifest", as: :pwa_manifest
   # get "service-worker" => "rails/pwa#service_worker", as: :pwa_service_worker
